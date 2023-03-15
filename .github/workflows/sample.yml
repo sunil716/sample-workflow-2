@@ -1,0 +1,15 @@
+name : First Workflow
+
+on : [push]
+
+jobs :
+  run-shell-commands : 
+    runs-on : ubuntu-latest
+    
+    steps : 
+      - name : first-command
+        run : echo "First command"
+      - name : second-cmd
+        run : |
+          ls -al
+          echo "Hello"
